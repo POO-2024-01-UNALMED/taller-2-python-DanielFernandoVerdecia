@@ -62,9 +62,9 @@ class Auto:
 
         if self.registro == self.motor.registro:
 
-            for r_asiento in self.asientos.registro:
+            for r_asiento in list(self.asientos):
 
-                if r_asiento != self.registro:
+                if r_asiento.registro != self.registro:
                     return "Las piezas no son originales"
 
 
