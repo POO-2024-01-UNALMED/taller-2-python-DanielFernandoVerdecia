@@ -62,15 +62,24 @@ class Auto:
 
         if self.registro == self.motor.registro:
 
-            for r_asiento in list(self.asientos):
+            for asiento in self.asientos:
 
-                if r_asiento.registro != self.registro:
+                if asiento == None:
                     return "Las piezas no son originales"
+                
+                else:
+                    
+                    if asiento.registro != self.registro:
+                        return "Las piezas no son originales"
 
 
-            return "Auto original"
-
+            return "Auto original"   
+         
         else:
 
             return "Las piezas no son originales" 
+
+
+a1 = Auto("model 3", 33000, [Asiento("blanco", 5000, 32),None, None, Asiento("blanco", 5000, 32), None],
+          "tesla", Motor(4, "electrico", 32), 32)
 
