@@ -52,7 +52,7 @@ class Auto:
 
         n_asientos = 0
 
-        for asiento in self.asiento:
+        for asiento in self.asientos:
             if asiento != None:
                 n_asientos += 1
 
